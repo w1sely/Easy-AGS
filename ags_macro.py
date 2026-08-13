@@ -61,8 +61,8 @@ class AGSMacroApp:
         self.btn_close.pack(side=tk.RIGHT, padx=(0, 10), pady=7, fill=tk.Y)
 
         # --- БИНДЫ ---
-        # Биндим на английский апостроф ('), который соответствует русской 'э'
-        keyboard.add_hotkey("'", self.on_hotkey_pressed)
+        # Биндим на скан-код 40 (соответствует английскому апострофу ' и русской 'э')
+        keyboard.add_hotkey(40, self.on_hotkey_pressed)
 
         # --- ФОНОВЫЙ МОНИТОРИНГ ИГРЫ ---
         threading.Thread(target=self.monitor_game, daemon=True).start()
